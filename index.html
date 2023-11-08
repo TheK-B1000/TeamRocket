@@ -1,0 +1,164 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./application.css">
+    <title>Employment Application Form</title>
+</head>
+<body>
+    <div class="card mx-auto" style="width: 1200px;">
+        <div class="card-header" style="text-align: center;">
+            <h1>Application</h1>
+        </div>
+        <div class="card-body">
+            <form id="employmentApplication">
+                <h2 style="text-align: center;">Personal Information</h2>
+                    <p class="app-option">
+                        <label class="app-label" for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName">
+                    </p>
+                    <p class="app-option"> 
+                        <label class="app-label" for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName">
+                    </p>
+                    
+                    <p class="app-option date-labels">
+                        <label class="app-label" for="birthdate">Birth Date:</label>
+                        <input type="date" id="birthdate" name="birthdate"><br>
+                    </p>
+                    <p class="app-option">
+                        <label class="app-label" for="email">Email:</label>
+                        <input type="email" id="email" name="email"><br>
+                    </p>
+                    
+                    <p class="app-option">
+                        <label class="app-label" for="phone">Mobile Phone: </label>
+                        <input type="tel" id="phone" name="phone"><br>
+                    </p>
+                    <p class="app-option">
+                        <label class="app-label" for="homePhone">Home Phone: </label>
+                        <input type="tel" id="homePhone" name="homePhone"><br>	
+                    </p>
+                    <p class="app-option">    
+                        <label class="app-label" for="street">Address:</label>
+                        <input type="text" id="street" name="street"><br>
+                    </p>
+                    <p class="app-option">
+                    <label class="app-label" for="city">City:</label>
+                    <input type="text" id="city" name="city"><br>
+                    </p>
+                    <p class="app-option">
+                    <label class="app-label" for="state">State:</label>
+                    <input type="text" id="state" name="state"><br>
+                    </p>
+                    <p class="app-option">
+                    <label class="app-label" for="zip">Zip Code:</label>
+                    <input type="text" id="zip" name="zip"><br>
+                    </p>
+                    <p class="app-option date-labels">
+                    <label class="app-label" for="start-date">Start Date:</label>
+                    <input type="date" id="start-date" name="start-date"><br>
+                    </p>
+                    <p class="app-option">
+                    <label class="app-label" for="max-hours">Max Working Hours:</label>
+                    <input type="text" id="max-hours" name="max-hours"><br>
+                    </p>
+                    <p class="app-option">
+                        <label class="app-label" for="ssn">Social Security Number:</label>
+                        <input type="text" id="ssn" name="ssn" pattern="\d{3}-\d{2}-\d{4}"><br>
+                    </p>
+                    <p class="app-option">
+                    <label for="educationLevel">Highest Level of Education:</label>
+                    <select id="educationLevel" name="educationLevel" id="educationLevel" onchange="showEduLevel()">
+                        <option value=""></option>
+                        <option value="high_school">High School/GED</option>
+                        <option value="undergraduate">Undergraduate</option>
+                        <option value="graduate">Graduate</option>
+                        s<option value="post_graduate">Post Graduate</option>
+                    </select>
+                    </p>
+                    <div style="text-align: center;">
+                        <span style="display:none;" id="EduSpan">
+                            <p class="app-option">
+                                <label class="app-label">School</label>
+                                <input type="text" name="School"/>
+                            </p>
+                            <p class="app-option">
+                                <label class="app-label">City/State</label>
+                                <input type="text" name="cityState"/>
+                            </p>
+                            <p class="app-option">
+                                <label class="app-label">Graduation Date</label>
+                                <input type="text" name="gradDate"/>
+                            </p>
+                            <p class="app-option">
+                                <label class="app-label">Major/Degree</label>
+                                <input type="text" name="majorDegreee"/>
+                            </p>
+                        </span>
+                    </div>
+                    <p class="app-option">
+                        <label for="transport">Do you have reliable transportation?</label>
+                        Yes <input type="radio" name="transport" value="yes">
+                        No <input type="radio" name="transport" value="no"><br>
+                    </p>
+                    <p class="app-option">
+                        <label>Have you served in the military?
+                            <input type="radio" name="military" value="yes"> Yes
+                            <input type="radio" name="military" value="no" checked> No
+                        </label>
+                    </p>
+                
+                    
+                        <h2 style="text-align: center;">Work Eligibility</h2>
+                        <p class="app-option">
+                            <label class="app-label" for="ref1Name">Reference #1 Name:</label>
+                            <input type="text" id="ref1Name" name="ref1Name">
+                        </p>
+                        <p class="app-option">
+                            <label class="app-label" for="ref1Relationship">Relationship:</label>
+                            <input type="text" id="ref1Relationship" name="ref1Relationship">
+                        </p>
+                        <p class="app-option">
+                            <label class="app-label" for="ref1Contact">Contact:</label>
+                            <input type="text" id="ref1Contact" name="ref1Contact">
+                        </p>
+                        <p class="app-option">
+                            <label class="app-label" for="ref2Name">Reference #2 Name:</label>
+                            <input type="text" id="ref2Name" name="ref2Name">
+                        </p>
+                        <p class="app-option">
+                            <label class="app-label" for="ref2Relationship">Relationship:</label>
+                            <input type="text" id="ref2Relationship" name="ref2Relationship">
+                        </p>
+                        <p class="app-option">
+                            <label class="app-label" for="ref2Contact">Contact:</label>
+                            <input type="text" id="ref2Contact" name="ref2Contact">
+                        </p>
+                        <p class="app-option">
+                            <label class="app-label" for="ref3Name">Reference #3 Name:</label>
+                            <input type="text" id="ref3Name" name="ref3Name">
+                        </p>
+                        <p class="app-option">
+                            <label class="app-label" for="ref3Relationship">Relationship:</label>
+                            <input type="text" id="ref3Relationship" name="ref3Relationship">
+                        </p>
+                        <p class="app-option">
+                            <label class="app-label" for="ref3Contact">Contact:</label>
+                            <input type="text" id="ref3Contact" name="ref3Contact">
+                        </p>
+
+                    <fieldset>
+                    <h2 style="text-align: center;"> Acknowledgement</h2>
+                        <p>I am not guaranteed the job that I am currently applying for, and acceptance of the application doesn’t guarantee me a contract with this company. 		Unfinished Business can end my employment at any time without notice or reason, and I am allowed to do the same. Unfinished Business is authorized to 		change their benefits, policies, and procedures during my employment. This may include reducing benefits. I give Unfinished Business permission to do a 		full background check, including contacting schools, previous employers, and references. If I provide Unfinished Business with false information, I may 		be fired without notice. I understand Unfinished Business’s drug policy and agree to follow it. This includes pre-employment random drug testing. If I 		do not follow these policies, it may lead to my termination. 
+                My employment may depend on passing job-related physical exams.  Only as part of the application process if Unfinished Business requests an 			investigative consumer report. If they do, they'll provide more information as required by the Fair Credit Reporting Act. I agree that my employment 		with Unfinished Business is probationary for 60 days. After these 60 days, they or I can end my employment for any reason. By submitting this 			application, you agree to our terms and policies.</p>
+                    <label><input type="checkbox" name="agreement" required> I agree to the Terms and Conditions</label>
+                        </fieldset>        
+                <input type="submit" value="Submit Application">
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

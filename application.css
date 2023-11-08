@@ -1,0 +1,14 @@
+.app-label {
+    display: inline-block;
+    width: 170px;
+    text-align: center;
+}
+
+.app-option {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.date-labels {
+    margin-right: 44;
+}
