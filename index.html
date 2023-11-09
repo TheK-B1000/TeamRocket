@@ -12,6 +12,7 @@
             <h1>Application</h1>
         </div>
         <div class="card-body">
+	<form id="applicationForm">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
                   <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Peronal Information</button>
@@ -25,15 +26,17 @@
               </ul>
               <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <h2 style="text-align: center;">Personal Information</h2>
-                    <p class="app-option">
-                        <label class="app-label" for="firstName">First Name:</label>
-                        <input type="text" id="firstName" name="firstName">
-                    </p>
-                    <p class="app-option"> 
-                        <label class="app-label" for="lastName">Last Name:</label>
-                        <input type="text" id="lastName" name="lastName">
-                    </p>
+    		<h2 style="text-align: center;">Personal Information</h2>
+    		<p class="app-option">
+        		<label class="app-label" for="firstName">First Name:</label>
+        		<input type="text" id="firstName" name="firstName" aria-describedby="firstNameError">
+        		<span class="error-message" id="firstNameError"></span>
+    		</p>
+    		<p class="app-option"> 
+        		<label class="app-label" for="lastName">Last Name:</label>
+        		<input type="text" id="lastName" name="lastName" aria-describedby="lastNameError">
+        		<span class="error-message" id="lastNameError"></span>
+    		</p>
                     
                     <p class="app-option date-labels">
                         <label class="app-label" for="birthdate">Birth Date:</label>
@@ -42,6 +45,7 @@
                     <p class="app-option">
                         <label class="app-label" for="email">Email:</label>
                         <input type="email" id="email" name="email"><br>
+			<span class="error-message" id="emailError"></span>
                     </p>
                     
                     <p class="app-option">
@@ -81,15 +85,16 @@
                         <input type="text" id="ssn" name="ssn" pattern="\d{3}-\d{2}-\d{4}"><br>
                     </p>
                     <p class="app-option">
-                    <label for="educationLevel">Highest Level of Education:</label>
-                    <select id="educationLevel" name="educationLevel" id="educationLevel" onchange="showEduLevel()">
-                        <option value=""></option>
-                        <option value="high_school">High School/GED</option>
-                        <option value="undergraduate">Undergraduate</option>
-                        <option value="graduate">Graduate</option>
-                        s<option value="post_graduate">Post Graduate</option>
-                    </select>
-                    </p>
+        		<label for="educationLevel">Highest Level of Education:</label>
+        		<select id="educationLevel" name="educationLevel" onchange="showEduLevel()">
+            			<option value=""></option>
+            			<option value="high_school">High School/GED</option>
+            			<option value="undergraduate">Undergraduate</option>
+            			<option value="graduate">Graduate</option>
+            <option value="post_graduate">Post Graduate</option>
+        </select>
+        <span class="error-message" id="educationLevelError"></span>
+    </p>
                     <div style="text-align: center;">
                         <span style="display:none;" id="EduSpan">
                             <p class="app-option">
@@ -110,17 +115,19 @@
                             </p>
                         </span>
                     </div>
-                    <p class="app-option">
-                        <label for="transport">Do you have reliable transportation?</label>
-                        Yes <input type="radio" name="transport" value="yes">
-                        No <input type="radio" name="transport" value="no"><br>
-                    </p>
-                    <p class="app-option">
-                        <label>Have you served in the military?
-                            <input type="radio" name="military" value="yes"> Yes
-                            <input type="radio" name="military" value="no" checked> No
-                        </label>
-                    </p>
+                   <p class="app-option">
+    			<label for="transport">Do you have reliable transportation?</label>
+    			Yes <input type="radio" name="transport" value="yes">
+    			No <input type="radio" name="transport" value="no"><br>
+    			<span class="error-message" id="transportError"></span>
+		   </p>
+		   <p class="app-option">
+    			<label>Have you served in the military?
+        			<input type="radio" name="military" value="yes"> Yes
+        			<input type="radio" name="military" value="no" checked> No
+    			</label>
+    			<span class="error-message" id="militaryError"></span>
+		   </p>
                 </div>
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                     <h2 style="text-align: center;">Work Eligibility</h2>
@@ -167,6 +174,7 @@
                 My employment may depend on passing job-related physical exams.  Only as part of the application process if Unfinished Business requests an 			investigative consumer report. If they do, they'll provide more information as required by the Fair Credit Reporting Act. I agree that my employment 		with Unfinished Business is probationary for 60 days. After these 60 days, they or I can end my employment for any reason. By submitting this 			application, you agree to our terms and policies.</p>
                     <label><input type="checkbox" name="agreement" required> I agree to the Terms and Conditions</label>      
                 <input type="submit" value="Submit Application">
+		</form>
                 </div>
               </div>
         </div>
