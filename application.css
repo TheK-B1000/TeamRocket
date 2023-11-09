@@ -12,3 +12,11 @@
 .date-labels {
     margin-right: 44;
 }
+input.error {
+  border: 2px solid red;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.8em;
+}
