@@ -12,8 +12,20 @@
             <h1>Application</h1>
         </div>
         <div class="card-body">
-            <form id="employmentApplication">
-                <h2 style="text-align: center;">Personal Information</h2>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Peronal Information</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Work Eligibility</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Acknowledgement</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <h2 style="text-align: center;">Personal Information</h2>
                     <p class="app-option">
                         <label class="app-label" for="firstName">First Name:</label>
                         <input type="text" id="firstName" name="firstName">
@@ -61,7 +73,7 @@
                     <input type="date" id="start-date" name="start-date"><br>
                     </p>
                     <p class="app-option">
-                    <label class="app-label" for="max-hours">Maximum Working Hours:</label>
+                    <label class="app-label" for="max-hours">Max Working Hours:</label>
                     <input type="text" id="max-hours" name="max-hours"><br>
                     </p>
                     <p class="app-option">
@@ -109,9 +121,9 @@
                             <input type="radio" name="military" value="no" checked> No
                         </label>
                     </p>
-                
-                    
-                        <h2 style="text-align: center;">Work Eligibility</h2>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <h2 style="text-align: center;">Work Eligibility</h2>
                         <p class="app-option">
                             <label class="app-label" for="ref1Name">Reference #1 Name:</label>
                             <input type="text" id="ref1Name" name="ref1Name">
@@ -148,17 +160,20 @@
                             <label class="app-label" for="ref3Contact">Contact:</label>
                             <input type="text" id="ref3Contact" name="ref3Contact">
                         </p>
-
-                    <fieldset>
+                </div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                     <h2 style="text-align: center;"> Acknowledgement</h2>
                         <p>I am not guaranteed the job that I am currently applying for, and acceptance of the application doesn’t guarantee me a contract with this company. 		Unfinished Business can end my employment at any time without notice or reason, and I am allowed to do the same. Unfinished Business is authorized to 		change their benefits, policies, and procedures during my employment. This may include reducing benefits. I give Unfinished Business permission to do a 		full background check, including contacting schools, previous employers, and references. If I provide Unfinished Business with false information, I may 		be fired without notice. I understand Unfinished Business’s drug policy and agree to follow it. This includes pre-employment random drug testing. If I 		do not follow these policies, it may lead to my termination. 
                 My employment may depend on passing job-related physical exams.  Only as part of the application process if Unfinished Business requests an 			investigative consumer report. If they do, they'll provide more information as required by the Fair Credit Reporting Act. I agree that my employment 		with Unfinished Business is probationary for 60 days. After these 60 days, they or I can end my employment for any reason. By submitting this 			application, you agree to our terms and policies.</p>
-                    <label><input type="checkbox" name="agreement" required> I agree to the Terms and Conditions</label>
-                        </fieldset>        
+                    <label><input type="checkbox" name="agreement" required> I agree to the Terms and Conditions</label>      
                 <input type="submit" value="Submit Application">
-            </form>
+                </div>
+              </div>
         </div>
     </div>
+      
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 </body>
 </html>
